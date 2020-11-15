@@ -1,0 +1,4 @@
+[submodule "subtest1"]
+	path = subtest1
+	url = git@github.com:stefanjaw/subtest1.git
+	branch = odoo_v13
