@@ -10,3 +10,7 @@
 	path = l10n_cr_einvoice
 	url = git@github.com:stefanjaw/l10n_cr_einvoice.git
 	branch = odoov13nz
+[submodule "l10n_cr_zones"]
+	path = l10n_cr_zones
+	url = git@github.com:stefanjaw/l10n_cr_zones.git
+	branch = odoo_v13
