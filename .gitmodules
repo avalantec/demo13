@@ -1,7 +1,3 @@
-[submodule "subtest1"]
-	path = subtest1
-	url = git@github.com:stefanjaw/subtest1.git
-	branch = odoo_v13
 [submodule "l10n_cr_pos"]
 	path = l10n_cr_pos
 	url = git@github.com:stefanjaw/l10n_cr_pos.git
