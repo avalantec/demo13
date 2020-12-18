@@ -1,0 +1,4 @@
+[submodule "l10n_cr_zones"]
+	path = l10n_cr_zones
+	url = git@github.com:stefanjaw/l10n_cr_zones.git
+	branch = odoo_v13
