@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<data name="Frontend Layout" inherit_id="web.layout" primary="True">
-        <xpath expr="//head/link[last()]" position="after">
+<template id="web.frontend_layout_custom" name="template_name" inherit_id="web.layout">
+      <xpath expr="//head/link[last()]" position="after">
             <t t-call-assets="web.assets_common" t-js="false"/>
             <t t-call-assets="web.assets_frontend" t-js="false"/>
         </xpath>
@@ -22,24 +22,7 @@
                 <main>
                     <t t-raw="0"/>
                 </main>
-                <footer t-if="not no_footer" id="bottom" data-anchor="true" class="bg-light o_footer">
-                    <div id="footer"/>
-                    <div class="o_footer_copyright">
-                        <div class="container py-3">
-                            <div class="row">
-                                <div class="col-sm text-center text-sm-left text-muted">
-                                    <t t-call="web.debug_icon"/>
-                                    <span>Copyright &amp;copy;</span> <span t-field="res_company.name" itemprop="name">Company name</span>
-                                </div>
-                                <div class="col-sm text-center text-sm-right">
-                                    <t t-call="web.brand_promotion"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
             </div>
         </xpath>
-    <xpath expr="." position="attributes"><attribute name="t-name">web.frontend_layout_custom</attribute>
-    </xpath>
-    </data>
+
+</template>
