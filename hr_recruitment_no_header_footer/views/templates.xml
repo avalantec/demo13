@@ -1,5 +1,5 @@
 <odoo>
-    <template id="website_hr_recruitment.custom" inherit_id="website_hr_recruitment.index">
+    <template id="website_hr_recruitment_custom" inherit_id="website_hr_recruitment.index">
          <xpath expr="//header" position="replace">
          </xpath>
          <xpath expr="//div[@id='footer']" position="replace">
