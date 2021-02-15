@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<odoo>
 <template id="web.frontend_layout_custom" inherit_id="web.layout">
       <xpath expr="//head/link[last()]" position="after">
             <t t-call-assets="web.assets_common" t-js="false"/>
@@ -26,3 +26,4 @@
         </xpath>
 
 </template>
+</odoo>
