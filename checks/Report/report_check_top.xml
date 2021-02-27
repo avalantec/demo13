@@ -4,17 +4,17 @@
     <div class="ckus_check">
         <div class="row">
           <div class="col-12">
-            <span t-field="o.journal.name"/> 
+            <span t-field="o.journal_id.name"/> 
           </div>
         </div>
          <div class="row">
           <div class="col-12">
-            <span t-field="o.journal.name"/> 
+            <span t-field="o.journal_id.name"/> 
           </div>
         </div>
          <div class="row">
           <div class="col-12">
-            <span t-field="o.journal.name"/> 
+            <span t-field="o.journal_id.name"/> 
           </div>
         </div>
     </div>
