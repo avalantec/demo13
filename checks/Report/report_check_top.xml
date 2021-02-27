@@ -14,7 +14,8 @@
             <div class="ckus_amount_in_word" t-esc="page['amount_in_word']"/>
             <div class="ckus_payee_addr" t-esc="page['partner_id']" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
             <div class="ckus_memo" t-esc="page['memo']"/>
-             <div class="ckus_memo" t-field="o.journal_id.name"/>
+            modificando
+            <span t-field="o.journal_id.name"/>
         </div>
     </div>
 </template>
