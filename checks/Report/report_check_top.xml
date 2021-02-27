@@ -1,3 +1,4 @@
+<odoo>
 <template id="template_id" inherit_id="l10n_us_check_printing.ckus_check">
     <div class="ckus_check" position="replace">
         <div class="ckus_check">
@@ -17,3 +18,4 @@
         </div>
     </div>
 </template>
+</odoo>
