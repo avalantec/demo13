@@ -68,7 +68,7 @@
               </div>
               <div class="col-6 mt-5">
                   <div class="form-group">
-                      <span style="border-bottom: 1px solid black;">_______________________________</span>
+                      <span style="border-bottom: 1px solid black;width:200px;"/>
                       <br/>
                       <span>AUTHORIZED SIGNATURE</span>
                     </div>
