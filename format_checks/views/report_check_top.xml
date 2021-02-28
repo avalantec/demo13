@@ -9,12 +9,12 @@
                 <div class="col-4">
                     <span t-esc="o.journal_id.company_name"/>
                     <br/>
-                    <span t-esc="o.journal_id.bank_id.company_address"/>
+                    <span t-esc="o.journal_id.company_address"/>
                 </div>
                 <div class="col-4">
                     <span t-esc="o.journal_id.bank_name"/>
                     <br/>
-                    <span t-esc="o.journal_id.bank_id.bank_address"/>
+                    <span t-esc="o.journal_id.bank_address"/>
                 </div>
                 <div class="col-4">
                     <span t-esc="o.check_number"/>
