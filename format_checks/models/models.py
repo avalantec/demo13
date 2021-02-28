@@ -15,13 +15,12 @@ class AccountJournal(models.Model):
     bank_address = fields.Char(string='Bank Address')
     hash_code = fields.Char(string='hash',readonly=True)
 
-    def create_hash_code(self):
-        data = self.company_name + self.company_address + self.bank_name + self.bank_address
-        return hashlib.md5(data).hexdigest() 
+    def create_hash_code(self,values):
+        data = str(values['company_name'] or '') + str(values['self.company_address'] or '') + str(values['bank_name'] or '') + str(values['bank_address'] or '')
+        return hashlib.md5(data.encode()).hexdigest() 
 
     def create(self, values):
-        log.info("valuuuuesss {0}".format(values))
-        hash_code = self.create_hash_code()
+        hash_code = self.create_hash_code(values)
         if self.hash_code != hash_code:
             values['hash_code'] = hash_code
             self.log_in_chatter(hash_code)
@@ -29,9 +28,7 @@ class AccountJournal(models.Model):
         return res
 
     def write(self, values):
-        log.info(' item name no tiene clave %s',item.name)
-        if values['id']:
-        hash_code = self.create_hash_code()
+        hash_code = self.create_hash_code(values)
         if self.hash_code != hash_code:
             values['hash_code'] = hash_code
             self.log_in_chatter(hash_code)
