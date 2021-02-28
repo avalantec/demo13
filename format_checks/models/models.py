@@ -15,7 +15,7 @@ class AccountJournal(models.Model):
     hash_code = fields.Char(string='hash',readonly=True)
 
     def create_hash_code(self,values):
-        data = str(values['company_name'] or '') + str(values['company_address'] or '') + str(values['bank_name'] or '') + str(values['bank_address'] or '')
+        data = str(values.get('company_name')) + str(values.get('company_address')) + str(values.get('bank_name') ) + str(values.get('bank_address') )
         return hashlib.md5(data.encode()).hexdigest() 
 
     def create(self, values):
