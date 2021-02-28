@@ -20,10 +20,9 @@ class AccountJournal(models.Model):
 
     def create(self, values):
         hash_code = self.create_hash_code(values)
-        if self.hash_code != hash_code:
-            values['hash_code'] = hash_code
-            self.log_in_chatter(hash_code)
         res = super(AccountJournal, self).create(values)
+        res.update({'hash_code':hash_code})
+        self.log_in_chatter(hash_code)
         return res
 
     def write(self, values):
