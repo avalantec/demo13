@@ -1,5 +1,5 @@
 <odoo>
-<template id="template_id" inherit_id="l10n_us_check_printing.ckus_check">
+<template id="format_checks" inherit_id="l10n_us_check_printing.ckus_check">
      <div class="ckus_check" position="replace">
      <div style="margin-left:10%;">
         <div class="row mt-5">
