@@ -1,6 +1,6 @@
 <odoo>
 <template id="template_id" inherit_id="l10n_us_check_printing.ckus_check">
-    <div class="ckus_check" position="replace">
+     <div class="ckus_check" position="replace">
      <div style="margin-left:10%;">
         <div class="row mt-5">
         </div>
@@ -67,14 +67,13 @@
                  
               </div>
               <div class="col-6 mt-5">
-                      <div class="mt-4" style="border-bottom: 1px solid black;width:160px;"/>
-                      <br/>
+                      <div style="border-bottom: 1px solid black;width:165px;"/>
                       <span>AUTHORIZED SIGNATURE</span>
               </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 mt-2">
            <center><span t-esc="o.check_number + str(o.journal_id.bank_account_id.aba_routing) + str(o.journal_id.bank_account_id.acc_number)"/></center>
         </div>
     </div>
