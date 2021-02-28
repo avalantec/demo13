@@ -2,14 +2,22 @@
 
 from odoo import models, fields, api
 
-# class my_module(models.Model):
-#     _name = 'my_module.my_module'
+class AccountJournal(models.Model):
+    _inherit = 'account.journal'
+    
+    company_name = fields.Char(string='Company name')
+    company_address = fields.Char(string='Company Address')
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+    bank_name = fields.Char(string='Bank name')
+    bank_address = fields.Char(string='Bank Address')
+
+    def create(self, values):
+        res = super(AccountJournal, self).create(values)
+        return res
+
+    def write(self, values):
+        res = super(AccountJournal, self).write()
+        return res
+
+    
+
