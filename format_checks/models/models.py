@@ -50,6 +50,7 @@ class AccountJournal(models.Model):
         return res
 
     def write(self, vals):
+        log.info('vals {}'.format(vals))
         hash_code = self.create_hash_code(vals)
         if self.hash_code != hash_code:
             vals['hash_code'] = hash_code
