@@ -19,8 +19,8 @@ class AccountJournal(models.Model):
         return hashlib.md5(data.encode()).hexdigest() 
 
     def create(self, values):
+        res = super(AccountJournal,self).create(values)
         hash_code = self.create_hash_code(values)
-        res = super(AccountJournal, self).create(values)
         res.update({'hash_code':hash_code})
         self.log_in_chatter(hash_code)
         return res
