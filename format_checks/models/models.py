@@ -18,19 +18,20 @@ class AccountJournal(models.Model):
         data = str(values.get('company_name')) + str(values.get('company_address')) + str(values.get('bank_name') ) + str(values.get('bank_address') )
         return hashlib.md5(data.encode()).hexdigest() 
 
-    def create(self, values):
-        res = super(AccountJournal,self).create(values)
-        hash_code = self.create_hash_code(values)
+    @api.model
+    def create(self, vals):
+        res = super(AccountJournal,self).create(vals)
+        hash_code = self.create_hash_code(vals)
         res.update({'hash_code':hash_code})
         self.log_in_chatter(hash_code)
         return res
 
-    def write(self, values):
-        hash_code = self.create_hash_code(values)
+    def write(self, vals):
+        hash_code = self.create_hash_code(vals)
         if self.hash_code != hash_code:
-            values['hash_code'] = hash_code
+            vals['hash_code'] = hash_code
             self.log_in_chatter(hash_code)
-        res = super(AccountJournal, self).write(values)
+        res = super(AccountJournal, self).write(vals)
         return res
     
     def log_in_chatter(self,body):
