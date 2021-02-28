@@ -3,6 +3,9 @@
 from odoo import models, fields, api
 import hashlib 
 import time
+import logging
+import time
+log = logging.getLogger(__name__)
 
 class AccountJournal(models.Model):
     _inherit = 'account.journal'
@@ -35,7 +38,7 @@ class AccountJournal(models.Model):
             data = data + values.get('bank_address')
         else:
             data = data + str(self.bank_name)
-
+        log.info("cadena {}".format(data))
         return hashlib.md5(data.encode()).hexdigest() 
 
     @api.model
