@@ -1,6 +1,6 @@
 <odoo>
 <template id="check_layout" inherit_id="l10n_us_check_printing.ckus_check">
-     <div class="ckus_check" position="replace">
+    <xpath expr="//div[@class='ckus_check']" position="replace">
         <div style="margin-left:10%;">
             <div class="row mt-5">
             </div>
@@ -67,6 +67,7 @@
             <center><span t-esc="o.check_number + str(o.journal_id.bank_routing_number) + str(o.journal_id.account_number)"/></center>
             </div>
         </div>
-   </div>
+        
+    </xpath>
 </template>
 </odoo>
