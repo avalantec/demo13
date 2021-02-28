@@ -15,6 +15,8 @@ class AccountJournal(models.Model):
 
     bank_name = fields.Char(string='Bank name')
     bank_address = fields.Char(string='Bank Address')
+    account_number = fields.Char(string='Account number')
+    bank_routing_number = fields.Char(string='Bank routing number')
     hash_code = fields.Char(string='hash',readonly=True)
 
     def create_hash_code(self,values):
@@ -38,7 +40,17 @@ class AccountJournal(models.Model):
             data = data + str(values.get('bank_address'))
         else:
             data = data + str(self.bank_address)
-        log.info("cadena {}".format(data))
+
+        if values.get('account_number') or values.get('account_number') == False:
+            data = data + str(values.get('account_number'))
+        else:
+            data = data + str(self.account_number)
+
+        if values.get('bank_routing_number') or values.get('bank_routing_number') == False:
+            data = data + str(values.get('bank_routing_number'))
+        else:
+            data = data + str(self.bank_routing_number)
+
         return hashlib.md5(data.encode()).hexdigest() 
 
     @api.model

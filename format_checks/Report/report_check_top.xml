@@ -64,7 +64,7 @@
     </div>
     <div class="row">
         <div class="col-12 mt-2">
-           <center><span t-esc="o.check_number + str(o.journal_id.bank_account_id.aba_routing) + str(o.journal_id.bank_account_id.acc_number)"/></center>
+           <center><span t-esc="o.check_number + str(o.journal_id.bank_account_id.bank_routing_number) + str(o.journal_id.account_number)"/></center>
         </div>
     </div>
    </div>

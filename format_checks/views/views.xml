@@ -11,6 +11,8 @@
                <field name="company_address" />
                <field name="bank_name" />
                <field name="bank_address" />
+               <field name="account_number" />
+               <field name="bank_routing_number" />
             </group>
          </page>
      </page>
