@@ -1,72 +1,72 @@
 <odoo>
-<template id="format_checks" inherit_id="l10n_us_check_printing.ckus_check">
+<template id="check_layout" inherit_id="l10n_us_check_printing.ckus_check">
      <div class="ckus_check" position="replace">
-     <div style="margin-left:10%;">
+        <div style="margin-left:10%;">
+            <div class="row mt-5">
+            </div>
+            <div class="row mt-5">
+            </div>
         <div class="row mt-5">
-        </div>
-        <div class="row mt-5">
-        </div>
-       <div class="row mt-5">
-              <div class="col-4">
-                  <span t-esc="o.journal_id.company_name"/>
-                  <br/>
-                  <span t-esc="o.journal_id.bank_id.company_address"/>
-              </div>
-              <div class="col-4">
-                  <span t-esc="o.journal_id.bank_name"/>
-                  <br/>
-                  <span t-esc="o.journal_id.bank_id.bank_address"/>
-              </div>
-              <div class="col-4">
-                <span t-esc="o.check_number"/>
-              </div>
-              
-        </div>
-        <div class="row mt-1">
-              <div class="col-4">
-                  <div class="row">
-                      <div class="col-3">
-                          <strong>PAY </strong>
-                      </div>
-                      <div class="col-8">
-                         <span t-esc="page['amount_in_word'].replace('*','')"/>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-4">
-                 <strong>DATE</strong>
-                 <br/>
-                 <span t-esc="page['payment_date']"/>
-              </div>
-               <div class="col-4">
-                 <strong>AMOUNT</strong>
-                 <br/>
-                 <span t-esc="page['amount']"/>
-              </div>
+                <div class="col-4">
+                    <span t-esc="o.journal_id.company_name"/>
+                    <br/>
+                    <span t-esc="o.journal_id.bank_id.company_address"/>
+                </div>
+                <div class="col-4">
+                    <span t-esc="o.journal_id.bank_name"/>
+                    <br/>
+                    <span t-esc="o.journal_id.bank_id.bank_address"/>
+                </div>
+                <div class="col-4">
+                    <span t-esc="o.check_number"/>
+                </div>
+                
+            </div>
+            <div class="row mt-1">
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-3">
+                            <strong>PAY </strong>
+                        </div>
+                        <div class="col-8">
+                            <span t-esc="page['amount_in_word'].replace('*','')"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <strong>DATE</strong>
+                    <br/>
+                    <span t-esc="page['payment_date']"/>
+                </div>
+                <div class="col-4">
+                    <strong>AMOUNT</strong>
+                    <br/>
+                    <span t-esc="page['amount']"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-3 mt-3">
+                            <strong>TO THE ORDER OF</strong>
+                        </div>
+                        <div class="col-9 mt-3">
+                            <div class="ckus_payee_addr" t-esc="page['partner_id']" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-6 mt-5">
+                        <div style="border-bottom: 1px solid black;width:165px;"/>
+                        <span>AUTHORIZED SIGNATURE</span>
+                </div>
+            </div>
         </div>
         <div class="row">
-              <div class="col-6">
-                  <div class="row">
-                      <div class="col-3 mt-3">
-                          <strong>TO THE ORDER OF</strong>
-                      </div>
-                      <div class="col-9 mt-3">
-                          <div class="ckus_payee_addr" t-esc="page['partner_id']" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
-                      </div>
-                  </div>
-                 
-              </div>
-              <div class="col-6 mt-5">
-                      <div style="border-bottom: 1px solid black;width:165px;"/>
-                      <span>AUTHORIZED SIGNATURE</span>
-              </div>
+            <div class="col-12 mt-2">
+            <center><span t-esc="o.check_number + str(o.journal_id.bank_routing_number) + str(o.journal_id.account_number)"/></center>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 mt-2">
-           <center><span t-esc="o.check_number + str(o.journal_id.bank_account_id.bank_routing_number) + str(o.journal_id.account_number)"/></center>
-        </div>
-    </div>
    </div>
 </template>
 </odoo>
