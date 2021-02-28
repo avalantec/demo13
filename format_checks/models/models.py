@@ -20,22 +20,22 @@ class AccountJournal(models.Model):
     def create_hash_code(self,values):
         data = ''
         if values.get('company_name') or  values.get('company_name') == False:
-            data = data + values.get('company_name')
+            data = data + str(values.get('company_name'))
         else:
             data = data + str(self.company_name)
 
         if values.get('company_address') or values.get('company_address') == False:
-            data = data + values.get('company_address')
+            data = data + str(values.get('company_address'))
         else:
             data = data + str(self.company_address)
 
         if values.get('bank_name') or values.get('bank_name') == False:
-            data = data + values.get('bank_name')
+            data = data + str(values.get('bank_name'))
         else:
             data = data + str(self.bank_name)
 
         if values.get('bank_address') or values.get('bank_address') == False:
-            data = data + values.get('bank_address')
+            data = data + str(values.get('bank_address'))
         else:
             data = data + str(self.bank_address)
         log.info("cadena {}".format(data))
