@@ -15,14 +15,34 @@ class AccountJournal(models.Model):
     hash_code = fields.Char(string='hash',readonly=True)
 
     def create_hash_code(self,values):
-        data = str(values.get('company_name')) + str(values.get('company_address')) + str(values.get('bank_name') ) + str(values.get('bank_address') )
+        data = ''
+        if values.get('company_name'):
+            data = data + values.get('company_name')
+        else:
+            data = data + str(self.company_name)
+
+        if values.get('company_address'):
+            data = data + values.get('company_address')
+        else:
+            data = data + str(self.company_address)
+
+        if values.get('bank_name'):
+            data = data + values.get('bank_name')
+        else:
+            data = data + str(self.bank_name)
+
+        if values.get('bank_address'):
+            data = data + values.get('bank_address')
+        else:
+            data = data + str(self.bank_name)
+
         return hashlib.md5(data.encode()).hexdigest() 
 
     @api.model
     def create(self, vals):
         res = super(AccountJournal,self).create(vals)
         hash_code = self.create_hash_code(vals)
-        res.update({'hash_code':hash_code})
+        self.update({'hash_code':hash_code})
         self.log_in_chatter(hash_code)
         return res
 
