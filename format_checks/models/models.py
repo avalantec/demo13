@@ -3,7 +3,6 @@
 from odoo import models, fields, api
 import hashlib 
 import time
-log = logging.getLogger(__name__)
 
 class AccountJournal(models.Model):
     _inherit = 'account.journal'
