@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "checks",
+    'name': "format_checks",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Modification to checks layout""",
 
     'description': """
-        Long description of module's purpose
+        Modification to checks layout
     """,
 
     'author': "Avalantec",
