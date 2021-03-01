@@ -1,5 +1,18 @@
 <odoo>
 <template id="format_checks.check_layout">
+        <style type="text/css">
+
+         @font-face {
+            font-family: e13b;
+            src: url(ADVMICR.TTF) format("truetype");
+         }
+         
+         p{
+            font-family: e13b;
+         }
+         
+         </style>
+
         <div style="margin-left:10%;font-size:9px;">
             <div class="row mt-5">
             </div>
@@ -63,7 +76,7 @@
         </div>
         <div class="row">
             <div class="col-12 mt-2">
-            <center><span t-esc="o.check_number + str(o.journal_id.bank_routing_number) + str(o.journal_id.account_number)"/></center>
+            <center><p t-esc="'C'+o.check_number+'C '+'A'+str(o.journal_id.bank_routing_number)+'A '+str(o.journal_id.account_number)+'C"/></center>
             </div>
         </div>
 </template>
