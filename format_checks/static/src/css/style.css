@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'e13b';
+    src: url('../fonts/ADVMICR.TTF')  format('truetype'), /* Safari, Android, iOS */
+}
+.font_e13b
+{
+    font: normal 12px e13b !important;
+}
