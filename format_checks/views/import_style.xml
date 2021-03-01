@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-    <template inherit_id="report.minimal_layout" id="minimal_layout_inherit">
+    <template inherit_id="web.report_layout" id="minimal_layout_inherit">
       <xpath expr="//head" position="inside">
              <link rel='stylesheet' href="/format_checks/static/src/css/style.css"/>
       </xpath>
