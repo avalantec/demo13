@@ -26,7 +26,7 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/report_check_top.xml',
-        'views/import_style.xml',
+        'views/assets.xml',
     ],
 
 }
