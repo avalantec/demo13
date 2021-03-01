@@ -5,7 +5,7 @@
   <field name="inherit_id" ref="account.view_account_journal_form"/>
   <field name="arch" type="xml">
      <page name="advanced_settings" position="after">
-         <page name="checks_information" string="Check Information" attrs="{'invisible': [('type', '!=', 'bank')]}" >
+         <page name="checks_information" string="Check Information" attrs="{'invisible': [('type', '!=', 'bank')]}"  groups="base.group_erp_manager" >
             <group>
                <field name="company_name" />
                <field name="company_address" />
