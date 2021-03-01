@@ -1,6 +1,6 @@
 <odoo>
 <template id="format_checks.check_layout">
-        <div style="margin-left:10%;">
+        <div style="margin-left:10%;font-size:11px;">
             <div class="row mt-5">
             </div>
             <div class="row mt-5">
