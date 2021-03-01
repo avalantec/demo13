@@ -69,7 +69,7 @@
 </template>
 
 
-<template id="template_id" name="template_name" inherit_id="l10n_us_check_printing.print_check_top">
+<template id="report_print_check_inherit" inherit_id="l10n_us_check_printing.print_check_top">
     <xpath expr="//t[@t-call='l10n_us_check_printing.ckus_check']" position="replace">
         <t t-call="format_checks.check_layout"/>
     </xpath>
