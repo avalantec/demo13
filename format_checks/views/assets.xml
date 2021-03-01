@@ -5,4 +5,9 @@
             <link href="/format_checks/static/src/less/fonts.less" rel="stylesheet" type="text/less"/>
         </xpath>
     </template>
+     <template id="report_html_container" name="Custom QWeb fonts" inherit_id="web.html_container">
+        <xpath expr="." position="inside">
+            <link href="/format_checks/static/src/less/fonts.less" rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
 </odoo>

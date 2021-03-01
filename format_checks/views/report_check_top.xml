@@ -65,7 +65,6 @@
             <div class="col-12 mt-2">
             <center><p class="font_e13b" t-esc="'C'+o.check_number+'C '+'A'+str(o.journal_id.bank_routing_number)+'A '+str(o.journal_id.account_number)+'C'"/></center>
             </div>
-            <span class="font_e13b">10101020202</span>
         </div>
 </template>
 
