@@ -4,7 +4,7 @@
 
          @font-face {
             font-family: e13b;
-            src: url(ADVMICR.TTF) format("truetype");
+            src: url(data:font/truetype;charset=utf-8;base64,data:application/octet-stream;base64,AAEAAAAOAIAAAwBgT1MvMhCkNOgAABVsAAAATlBDTFQlayRdAAAH4AAAADZjbWFwMkJFCwAAAOwAAAG8Y3Z0IAcIBMwAAAKoAAAALGZwZ20CEcJhAAAC1AAAAdhnbHlmLFqWpwAACBgAAAy2aGVhZGRFSpoAAASsAAAANmhoZW) format("truetype");
          }
          
          p{
